@@ -69,10 +69,20 @@ ENV_C_START='["0"]'
 - ENV_R_START is an array which specifies which x position of the original image to start at while drawing it
 - ENV_C_START is an array which specifies which y position of the original image to start at while drawing it
 
-### Notes: 
+### Notes:
 - Multiple fields can be passed into the arrays to spawn a thread for each one.
 - Change image.png/.jpg to specify what image to draw. One pixel is drawn every 5 minutes
 - PNG has priority over JPG
+
+
+#### OSX SSL Certificate Issue
+On Mac OS X, the problem is resolved by clicking on the "Install Certificates.command" file located in the Python directory of the Applications folder.
+
+To run the command, open a new Finder window. Click on "Applications". Then click on the directory where Python is installed. For example, "Python 3.7". Finally, kick on the "Install Certificates.command file.
+
+All of this can be accomplished by executing the following command in the Terminal application:
+
+`open "/Applications/Python 3.10/Install Certificates.command"`
 
 ## Run the Script
 
@@ -121,5 +131,5 @@ ENV_UNVERIFIED_PLACE_FREQUENCY='True'
 - Transparency can be achieved by using the RGB value (69, 42, 0) in any part of your image
 - If you'd like, you can enable Verbose Mode by adding --verbose to "python main.py". This will output a lot more information, and not neccessarily in the right order, but it is useful for development and debugging.
 ## Developing
-The nox CI job will run flake8 on the code. You can also do this locally by pip installing nox on your system and running 
+The nox CI job will run flake8 on the code. You can also do this locally by pip installing nox on your system and running
 `nox` in the repository directory.
